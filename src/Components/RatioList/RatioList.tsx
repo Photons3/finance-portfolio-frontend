@@ -1,21 +1,13 @@
 import React from "react";
-import { TestDataCompany } from "../Table/testData";
 
-const data = TestDataCompany[0];
+interface Props {
+  config: any;
+  data: any;
 
-interface Props {}
+}
 
-type Company = typeof data;
-
-const config = [
-  {
-    label: "Company Name",
-    render: (company: Company) => company.companyName,
-    subtitle: "This is the company name.",
-  },
-];
-const RatioList: React.FC<Props> = (props: Props): JSX.Element => {
-  const renderedRows = config.map((row) => {
+const RatioList: React.FC<Props> = ({config, data}: Props): JSX.Element => {
+  const renderedRows = config.map((row : any) => {
     return (
       <li className="py-3 sm:py-4">
         <div className="flex items-center space-x-4">
@@ -35,7 +27,7 @@ const RatioList: React.FC<Props> = (props: Props): JSX.Element => {
     );
   });
   return (
-    <div className="bg-white shadow rounded-lg mb-4 p-4 sm:p-6 h-full">
+    <div className="bg-white shadow rounded-lg ml-4 mt-4 mb-4 p-4 sm:p-6 h-full">
       <ul className="divide-y divide-gray-200">{renderedRows}</ul>
     </div>
   );
