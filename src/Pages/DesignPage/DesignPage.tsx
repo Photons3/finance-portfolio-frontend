@@ -21,8 +21,8 @@ const DesignPage: React.FC<Props> = (props: Props): JSX.Element => {
         This is StockView Design Page. This is where we will house our various
         design aspects of the app.
       </h2>
-      <RatioList data={testIncomeStatementData} config={tableConfig}/>
-      <Table />
+      <RatioList data={testIncomeStatementData} config={tableConfig} />
+      <Table data={testIncomeStatementData} configs={tableConfig} />
     </>
   );
 };
