@@ -38,7 +38,7 @@ const CompanyProfile: React.FC<Props> = (props: Props): JSX.Element => {
   const [companyData, setCompanyData] = useState<CompanyKeyMetrics>();
   useEffect(() => {
     const getCompanyKeyRatios = async () => {
-      const value = await getKeyMetrics(ticker);
+      const value = await getKeyMetrics(ticker!);
       setCompanyData(value?.data[0]);
     };
     getCompanyKeyRatios();

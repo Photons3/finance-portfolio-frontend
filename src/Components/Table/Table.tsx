@@ -6,7 +6,6 @@ interface Props {
 }
 
 const Table: React.FC<Props> = ({ configs, data }: Props): JSX.Element => {
-  console.log(data);
   const renderedRow = data.map((company: any) => {
     return (
       <tr key={company.cik}>
