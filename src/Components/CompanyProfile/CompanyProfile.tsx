@@ -4,7 +4,12 @@ import { CompanyKeyMetrics } from "../../company";
 import { getKeyMetrics } from "../../api";
 import RatioList from "../RatioList/RatioList";
 import Spinner from "../Spinner/Spinner";
-import { formatLargeNonMonetaryNumber, formatRatio } from "../../Helpers/NumberFormmating";
+import StockComment from "../StockComment/StockComment";
+
+import {
+  formatLargeNonMonetaryNumber,
+  formatRatio,
+} from "../../Helpers/NumberFormmating";
 
 type Props = {};
 
@@ -92,6 +97,7 @@ const CompanyProfile: React.FC<Props> = (props: Props): JSX.Element => {
       {companyData ? (
         <>
           <RatioList config={tableConfig} data={companyData} />
+          <StockComment stockSymbol={ticker} />
         </>
       ) : (
         <Spinner />

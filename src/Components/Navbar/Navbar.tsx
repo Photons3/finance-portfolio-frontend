@@ -23,13 +23,13 @@ const Navbar: React.FC<Props> = (props: Props): JSX.Element => {
         </div>
         {isLoggedIn() ? (
           <div className="hidden lg:flex items-center space-x-6 text-back">
-            <div className="hover:text-darkBlue">Welcome, {user?.email}</div>
-            <a
+            <div className="hover:text-darkBlue">Welcome, {user?.userName}</div>
+            <button
               onClick={logout}
               className="px-8 py-3 font-bold rounded text-white bg-lightGreen hover:opacity-70"
             >
               Logout
-            </a>
+            </button>
           </div>
         ) : (
           <div className="hidden lg:flex items-center space-x-6 text-back">

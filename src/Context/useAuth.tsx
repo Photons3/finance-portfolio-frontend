@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router";
 import { UserProfile } from "../Models/User";
-import React, { createContext, useContext, useEffect, useState } from "react";
+import React, { createContext, useEffect, useState } from "react";
 import { loginAPI, registerAPI } from "../Services/AuthService";
 import { toast } from "react-toastify";
 import axios from "axios";
@@ -48,7 +48,7 @@ export const UserProvider = ({ children }: Props) => {
           localStorage.setItem("token", res?.data.token);
 
           const userObj = {
-            userName: res?.data.userName,
+            userName: res?.data.username,
             email: res?.data.email,
           };
 
@@ -66,15 +66,16 @@ export const UserProvider = ({ children }: Props) => {
 
   const loginUser = async (username: string, password: string) => {
     await loginAPI(username, password)
-      .then((res) => {
+      .then((res: any) => {
         if (res) {
           localStorage.setItem("token", res?.data.token);
 
           const userObj = {
-            userName: res?.data.userName,
+            userName: res?.data.username,
             email: res?.data.email,
           };
 
+          console.log(userObj);
           localStorage.setItem("user", JSON.stringify(userObj));
 
           setToken(res?.data.token!);
