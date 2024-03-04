@@ -13,7 +13,6 @@ const ComparableFinder: React.FC<Props> = ({ ticker }: Props): JSX.Element => {
     const getComps = async () => {
       const value = await getComparableData(ticker);
       setCompanyData(value?.data[0]);
-      console.log(value);
     };
     getComps();
   }, [ticker]);

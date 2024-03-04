@@ -92,6 +92,7 @@ const CompanyProfile: React.FC<Props> = (props: Props): JSX.Element => {
     };
     getCompanyKeyRatios();
   }, [ticker]);
+  
   return (
     <>
       {companyData ? (

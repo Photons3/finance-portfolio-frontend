@@ -1,8 +1,9 @@
-import { useNavigate } from "react-router";
+import { createContext, useEffect, useState } from "react";
 import { UserProfile } from "../Models/User";
-import React, { createContext, useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { loginAPI, registerAPI } from "../Services/AuthService";
 import { toast } from "react-toastify";
+import React from "react";
 import axios from "axios";
 
 type UserContextType = {
@@ -27,13 +28,11 @@ export const UserProvider = ({ children }: Props) => {
   useEffect(() => {
     const user = localStorage.getItem("user");
     const token = localStorage.getItem("token");
-
     if (user && token) {
       setUser(JSON.parse(user));
       setToken(token);
       axios.defaults.headers.common["Authorization"] = "Bearer " + token;
     }
-
     setIsReady(true);
   }, []);
 
@@ -46,46 +45,37 @@ export const UserProvider = ({ children }: Props) => {
       .then((res) => {
         if (res) {
           localStorage.setItem("token", res?.data.token);
-
           const userObj = {
             userName: res?.data.username,
             email: res?.data.email,
           };
-
           localStorage.setItem("user", JSON.stringify(userObj));
-
           setToken(res?.data.token!);
           setUser(userObj!);
-
           toast.success("Login Success!");
           navigate("/search");
         }
       })
-      .catch((e: any) => toast.warning("Server error occured"));
+      .catch((e) => toast.warning("Server error occured"));
   };
 
   const loginUser = async (username: string, password: string) => {
     await loginAPI(username, password)
-      .then((res: any) => {
+      .then((res) => {
         if (res) {
           localStorage.setItem("token", res?.data.token);
-
           const userObj = {
             userName: res?.data.username,
             email: res?.data.email,
           };
-
-          console.log(userObj);
           localStorage.setItem("user", JSON.stringify(userObj));
-
           setToken(res?.data.token!);
           setUser(userObj!);
-
           toast.success("Login Success!");
           navigate("/search");
         }
       })
-      .catch((e: any) => toast.warning("Server error occured"));
+      .catch((e) => toast.warning("Server error occured"));
   };
 
   const isLoggedIn = () => {
@@ -97,7 +87,6 @@ export const UserProvider = ({ children }: Props) => {
     localStorage.removeItem("user");
     setUser(null);
     setToken("");
-
     navigate("/");
   };
 
