@@ -7,7 +7,6 @@ import CompanyProfile from "../Components/CompanyProfile/CompanyProfile";
 import IncomeStatement from "../Components/IncomeStatement/IncomeStatement";
 import BalanceSheet from "../Components/BalanceSheet/BalanceSheet";
 import CashflowStatement from "../Components/CashflowStatement/CashflowStatement";
-import TenKFinder from "../Components/TenKFinder/TenKFinder";
 
 export const router = createBrowserRouter([
   {
