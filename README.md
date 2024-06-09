@@ -38,6 +38,7 @@
 ![image](https://github.com/Photons3/finance-portfolio-frontend/assets/18119113/c0c92700-917f-44bd-aa33-19c9986b1101)
 
 6. Comment System
+
 ![image](https://github.com/Photons3/finance-portfolio-frontend/assets/18119113/79e0d971-68ec-4b60-a03d-012b0ccd0205)
 
 
