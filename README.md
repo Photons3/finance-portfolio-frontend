@@ -35,6 +35,7 @@
 5b. Cashflow Statement
 ![image](https://github.com/Photons3/finance-portfolio-frontend/assets/18119113/c3e8fa75-c3fd-455d-aee3-8c62f8119539)
 5c. Balance Sheet
+
 ![image](https://github.com/Photons3/finance-portfolio-frontend/assets/18119113/c0c92700-917f-44bd-aa33-19c9986b1101)
 
 6. Comment System
