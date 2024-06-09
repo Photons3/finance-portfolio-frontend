@@ -1,46 +1,30 @@
-# Getting Started with Create React App
+# Finance Stock Portfolio Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## How to run
 
-## Available Scripts
+### Prerequisite:
+1. You must have NodeJS installed in your machine follow this [link](https://nodejs.org/en/learn/getting-started/how-to-install-nodejs) for instructions.
+2. You must clone this repository to your machine.
 
-In the project directory, you can run:
+### Instructions on how to run the webpage.
+1. run `npm install` in the root directory of this project.
+2. Run `npm start` to start the project in development mode.
+3. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+3a. If you want to build a production grade webpage run `npm run build`.
 
-### `npm start`
+## Features
+1. Landing Page: View the landing page here.
+![image](https://github.com/Photons3/finance-portfolio-frontend/assets/18119113/42746383-e8cf-4d6b-a7e2-bfcdcb86350f)
+2. User Accounts
+2a. Signup
+![image](https://github.com/Photons3/finance-portfolio-frontend/assets/18119113/e5cd4cd4-a99f-4422-a0b1-60c820170f44)
+2b. Login
+![image](https://github.com/Photons3/finance-portfolio-frontend/assets/18119113/0ddfba3e-77f6-427d-8fc9-5bfcce5b6e98)
+3. Search for stock tickers
+![image](https://github.com/Photons3/finance-portfolio-frontend/assets/18119113/0022f349-0691-454f-9d92-fa56090c4e42)
+4. Add to Watchlist
+5. Comment System
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
