@@ -1,16 +1,19 @@
 # Finance Stock Portfolio Frontend
+This is the React front end of the website this should be run together with the .NET Core API backend
 
 ## How to run
 
 ### Prerequisite:
 1. You must have NodeJS installed in your machine follow this [link](https://nodejs.org/en/learn/getting-started/how-to-install-nodejs) for instructions.
 2. You must clone this repository to your machine.
+3. Clone the backend API Repository [link](https://github.com/Photons3/api-backend-finance-portfolio/tree/main)
 
 ### Instructions on how to run the webpage.
 1. run `npm install` in the root directory of this project.
 2. Run `npm start` to start the project in development mode.
 3. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 3a. If you want to build a production grade webpage run `npm run build`.
+4. Run the API Backend together with this
 
 ## Features
 1. Landing Page
